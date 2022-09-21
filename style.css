@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #dea4a9;
+  background: linear-gradient(to right, #d5afb5, #e76770);
+  font-family: "Lato", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  background-image:url("https://thumb.photo-ac.com/14/14ceca9564735573ad644c5e91f48962_t.jpeg");
+}
+
+
+
+h1 {
+  letter-spacing: 3px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 150px;
+  color: rgb(246, 9, 9);
+  font-family: "Times New Roman", Times, serif;
+}
+
+.flip-horizontal {
+  transform: scale(-1, 1);
+}
+
+.poke-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: space-between;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.pokemon {
+  height: 280px;
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.pokemon:hover {
+  color: #db0000;
+}
+
+.pokemon .img-container {
+  /* background-color:  #eee; */
+  border-radius: 30%;
+  width: 120px;
+  height: 120px;
+  text-align: center;
+}
+
+.pokemon .img-container img {
+  max-width: 90%;
+  /* margin-top: 20px; */
+  transform: scale(-1, 1);
+}
+
+.pokemon .info {
+  margin-top: 20px;
+}
+
+.pokemon .info .number {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 0.8em;
+}
+
+.pokemon .info .name {
+  margin: 15px 0 7px;
+  letter-spacing: 1px;
+}
+
+/* カード本体 */
+.card {
+  width: 150px; /* 任意の横幅を指定 */
+  height: 0px;
+  position: relative;
+  cursor: pointer;
+ 
+}
+
+/* 擬似要素とpadding-topでカードの高さを指定 */
+.card::before {
+  content: "";
+  display: block;
+  padding-top: 0px;
+  /* padding-top: 142.5%; */
+}
+
+/* カード内の画像 */
+.front img {
+  width: 100%;
+  height: 221px;
+  width: 158px;
+}
+
+.back .img-container {
+  margin-top: 0px;
+  height: 150px;
+  width: 150px;
+}
+
+/* .front .img-container {
+  margin-top: 0px;
+  height: 140px;
+  width: 140px;
+  border-radius: 100px;
+} */
+
+.front img {
+  margin: 0px 0px 0px 0px;
+}
+/* カード裏面・表面の共通スタイル */
+.card .front,
+.card .back {
+  transition: all 0.6s;
+  left: 0;
+  top: 0;
+   /* height: 220px;  */
+  width: 150px;
+  backface-visibility: hidden;
+  background-color: #eee;
+  border-radius: 10px;
+  box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+}
+
+/* カード表面のスタイル */
+.back{
+  height: 145px;
+  width:  100px;
+  transform: rotateY(180deg);
+  position: absolute;
+}
+
+.front{
+  height: 145px;
+  position: absolute;
+
+}
+
+.quiz{
+  color:#db0000;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-top: 3px;
+}
+
+/* ホバー時のカード裏面 */
+.card:hover .front {
+  transform: rotateY(-180deg);
+}
+
+/* ホバー時のカード表面 */
+.card:hover .back {
+  transform: rotateY(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* メイン画面 */
+
+header, main, footer {
+    width: 80%;
+    margin: 30px auto;
+}
+
+#main {
+    width: 100%;
+    margin: 20px auto;
+}
+
+.box {
+    width: 50%;
+    display: inline-block;
+    border: 1px dotted gray;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: #db9e9e;
+    cursor: pointer;
+}
+
+.back-btn {
+    margin: 0 auto;
+    text-align: center;
+    color: red;
+}
+
+.back-btn img {
+    width: 10%;
+    cursor: pointer;
+}
+
+.back-btn p {
+    width: max-content;
+    margin: 0 auto;
+    cursor: pointer;
+    font-size: 20px;
+    color: yellow;
+}
+
+footer {
+    margin-top: 70px;
+    text-align: center;
+}
+
+/* 詳細画面 */
+
+#details {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    border-top: 6px solid #696B56;
+    border-right: 6px solid #696B56;
+    border-left: 6px solid #696B56;
+    box-sizing: border-box;
+    background-color: #CBCCAA;
+}
+
+.img-box {
+    text-align: center;
+    padding: 5px 0;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.details-box {
+    display: grid;
+    align-items: flex-end;
+    padding: 5px 0;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.flavor-text-box {
+    background-color: #CBCCAA;
+    padding: 25px;
+    border: 6px solid#696B56;
+    border-top: 3px solid#696B56;
+}
+
+
+
+
+
+
