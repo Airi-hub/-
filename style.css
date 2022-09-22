@@ -20,7 +20,7 @@ body {
 
 h1 {
   letter-spacing: 3px;
-  margin-top: 30px;
+  margin-top: 2px;
   margin-bottom: 30px;
   font-size: 150px;
   color: rgb(246, 9, 9);
@@ -177,6 +177,17 @@ h1 {
 
 
 
+ .title .menu{
+  padding-top: 50px;
+  padding-top: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:20px ;
+  flex-direction: row;
+  font-weight: bold;
+  position: center;
+  color: aliceblue;
+}
+
 /* メイン画面 */
 
 header, main, footer {
@@ -213,10 +224,17 @@ header, main, footer {
 
 .back-btn p {
     width: max-content;
-    margin: 0 auto;
+    margin: 3px auto;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 28px;
+    font-weight: bold;
     color: yellow;
+    /* margin-top: 3px; */
+    background: red;
+    border-bottom: 2px solid #f2f2e9;
+    border-radius: 0.7rem;
+    letter-spacing: 0.1em;
+
 }
 
 footer {
