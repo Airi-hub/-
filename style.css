@@ -197,7 +197,8 @@ header, main, footer {
 
 #main {
     width: 100%;
-    margin: 20px auto;
+    margin: 0px auto;
+    padding-top: opx;
 }
 
 .box {
